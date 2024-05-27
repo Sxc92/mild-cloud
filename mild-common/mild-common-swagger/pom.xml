@@ -5,16 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.mild</groupId>
-        <artifactId>mild</artifactId>
+        <artifactId>mild-common</artifactId>
         <version>${revision}</version>
     </parent>
-    <packaging>pom</packaging>
-    <artifactId>mild-common</artifactId>
-    <modules>
-        <module>mild-common-core</module>
-        <module>mild-common-mybatis</module>
-        <module>mild-common-swagger</module>
-    </modules>
+    <description>api接口文档</description>
+    <groupId>org.mild.common</groupId>
+    <artifactId>mild-common-swagger</artifactId>
+    <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

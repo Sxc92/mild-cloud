@@ -12,7 +12,7 @@ import org.mild.system.api.constant.AccountEnums;
  **/
 @EqualsAndHashCode(callSuper = true)
 @Data
-@TableName
+@TableName("mild_system_account")
 public class Account extends BaseModifyEntity {
 
     /**

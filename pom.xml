@@ -35,7 +35,8 @@
         <kafka.version>3.1.2</kafka.version>
         <mybatisplus.version>3.5.5</mybatisplus.version>
         <logback.version>1.5.3</logback.version>
-        <slf4j-api>1.7.25</slf4j-api>
+<!--        <slf4j-api>1.7.25</slf4j-api>-->
+        <mapstruct.version>1.5.5.Final</mapstruct.version>
     </properties>
 
     <dependencyManagement>
@@ -123,20 +124,39 @@
                 <version>${kafka.version}</version>
             </dependency>
 
+<!--            <dependency>-->
+<!--                <groupId>org.slf4j</groupId>-->
+<!--                <artifactId>slf4j-api</artifactId>-->
+<!--                <version>${slf4j-api}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.slf4j</groupId>-->
+<!--                <artifactId>slf4j-log4j12</artifactId>-->
+<!--                <version>${slf4j-api}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>ch.qos.logback</groupId>-->
+<!--                <artifactId>logback-classic</artifactId>-->
+<!--                <version>${logback.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>ch.qos.logback</groupId>-->
+<!--                <artifactId>logback-core</artifactId>-->
+<!--                <version>${logback.version}</version>-->
+<!--            </dependency>-->
+
+            <!-- MapStruct -->
             <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j-api}</version>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
+
+            <!-- MapStruct Processor -->
             <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
-                <version>${logback.version}</version>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
             </dependency>
 
             <!-- 引入框架公共包 -->
@@ -149,6 +169,12 @@
             <dependency>
                 <groupId>org.mild.common</groupId>
                 <artifactId>mild-common-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mild.common</groupId>
+                <artifactId>mild-common-swagger</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

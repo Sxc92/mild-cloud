@@ -6,7 +6,7 @@
     <parent>
         <groupId>org.mild</groupId>
         <artifactId>mild-system</artifactId>
-        <version>1.0.0</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>mild-system-service</artifactId>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.mild</groupId>
             <artifactId>mild-system-api</artifactId>
-            <version>1.0.0</version>
+            <version>${revision}</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
@@ -29,6 +29,26 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- 针对于SpringBoot 3.2 如果不配置调用接口异常 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                    <generatedSourcesDirectory>target/generated-sources</generatedSourcesDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

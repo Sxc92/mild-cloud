@@ -38,4 +38,7 @@ public interface CommonConstant {
      * 默认成功返回消息
      */
     String DEFAULT_ERROR_MSG = "failed";
+
+
+    String SYSTEM_ERROR = "系统异常";
 }
