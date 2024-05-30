@@ -30,7 +30,8 @@ public class AccountManageImpl implements AccountManage {
         Account account = accountService.getById(id);
         String userName = account.getUserName();
         System.out.println(userName);
-//        AccountVO accountVO = accountConvert.toAccountVO(account);
+        AccountVO accountVO = accountConvert.toAccountVO(account);
+        System.out.println(accountVO.getUserName());
         return null;
     }
 }

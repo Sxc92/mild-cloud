@@ -26,6 +26,9 @@
         <spring-boot.version>3.2.5</spring-boot.version>
         <spring-cloud.version>2023.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
+        <!-- notice lombok 选择这个版本 与  MapStruct 版本可以兼容 如果是 1.18.32 版本不兼容会存在bug -->
+        <lombok.version>1.18.24</lombok.version>
+
 
         <mysql.version>8.0.33</mysql.version>
         <redisson.version>3.24.3</redisson.version>
@@ -35,7 +38,7 @@
         <kafka.version>3.1.2</kafka.version>
         <mybatisplus.version>3.5.5</mybatisplus.version>
         <logback.version>1.5.3</logback.version>
-<!--        <slf4j-api>1.7.25</slf4j-api>-->
+        <knife4j.version>4.4.0</knife4j.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
     </properties>
 
@@ -124,26 +127,17 @@
                 <version>${kafka.version}</version>
             </dependency>
 
-<!--            <dependency>-->
-<!--                <groupId>org.slf4j</groupId>-->
-<!--                <artifactId>slf4j-api</artifactId>-->
-<!--                <version>${slf4j-api}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>org.slf4j</groupId>-->
-<!--                <artifactId>slf4j-log4j12</artifactId>-->
-<!--                <version>${slf4j-api}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>ch.qos.logback</groupId>-->
-<!--                <artifactId>logback-classic</artifactId>-->
-<!--                <version>${logback.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>ch.qos.logback</groupId>-->
-<!--                <artifactId>logback-core</artifactId>-->
-<!--                <version>${logback.version}</version>-->
-<!--            </dependency>-->
+            <!--            <dependency>-->
+            <!--                <groupId>com.github.xiaoymin</groupId>-->
+            <!--                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
+            <!--                <version>${knife4j.version}</version>-->
+            <!--            </dependency>-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
 
             <!-- MapStruct -->
             <dependency>
@@ -184,6 +178,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
 
         <dependency>

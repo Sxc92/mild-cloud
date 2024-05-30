@@ -1,0 +1,41 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: mild-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://106.75.225.35:8848
+    gateway:
+      # 设置与服务注册发现组件结合，这样可以采用服务名的路由策略
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: '*'
+            allowedMethods:
+              - OPTIONS
+              - GET
+              - POST
+#            allowCredentials: true
+            allowedHeaders: '*'
+            exposedHeaders:
+              - Access-Control-Expose-Headers
+              - Authorization,X-Suggested-Filename,content-disposition,Accept-Language
+            maxAge: 360000
+      x-forwarded:
+        enabled: true
+      routes:
+        # 服务提供者
+        - id: mild-system
+          uri: lb://mild-system
+          predicates:
+            - Path=/api/system/**
+          filters:
+#            - SwaggerHeaderFilter
+            - StripPrefix=2

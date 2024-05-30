@@ -3,6 +3,8 @@ package org.mild.system.domain.pojo;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 import org.mild.common.mybatis.base.BaseModifyEntity;
 import org.mild.system.api.constant.AccountEnums;
 
@@ -10,9 +12,9 @@ import org.mild.system.api.constant.AccountEnums;
  * @author 史偕成
  * @date 2024/05/24 17:11
  **/
-@EqualsAndHashCode(callSuper = true)
 @Data
-@TableName("mild_system_account")
+@EqualsAndHashCode(callSuper = true)
+@TableName("mild_sys_account")
 public class Account extends BaseModifyEntity {
 
     /**
@@ -32,4 +34,5 @@ public class Account extends BaseModifyEntity {
 
 
     private Integer type;
+
 }

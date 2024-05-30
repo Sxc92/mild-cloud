@@ -1,6 +1,9 @@
 package org.mild.system.api.vo;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import org.mild.common.domain.vo.BaseVO;
+import org.mild.system.api.constant.AccountEnums;
 
 import java.io.Serializable;
 
@@ -10,12 +13,26 @@ import java.io.Serializable;
  * @description
  * @create 2023/11/28 9:23
  */
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class AccountVO implements Serializable {
+public class AccountVO extends BaseVO {
     /**
-     * 用户名
+     * 账户名称
      */
     private String userName;
+
+    /**
+     * 密码
+     */
+    private String password;
+
+    /**
+     * 状态 {@link AccountEnums.AccountStatus}
+     */
+    private Integer status;
+
+
+    private Integer type;
 
 
 }
