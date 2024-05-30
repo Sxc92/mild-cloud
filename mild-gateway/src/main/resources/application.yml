@@ -22,7 +22,7 @@ spring:
               - OPTIONS
               - GET
               - POST
-#            allowCredentials: true
+            #            allowCredentials: true
             allowedHeaders: '*'
             exposedHeaders:
               - Access-Control-Expose-Headers
@@ -37,5 +37,13 @@ spring:
           predicates:
             - Path=/api/system/**
           filters:
-#            - SwaggerHeaderFilter
+            #            - SwaggerHeaderFilter
+            - StripPrefix=2
+        # wms 仓储服务
+        - id: mild-wms
+          uri: lb://mild-wms
+          predicates:
+            - Path=/api/wms/**
+          filters:
+            #            - SwaggerHeaderFilter
             - StripPrefix=2

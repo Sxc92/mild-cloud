@@ -4,19 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.mild</groupId>
-        <artifactId>mild</artifactId>
+        <groupId>org.mild.wms</groupId>
+        <artifactId>mild-wms</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>mild-system</artifactId>
-    <groupId>org.mild.system</groupId>
-    <version>${revision}</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>mild-system-api</module>
-        <module>mild-system-service</module>
-    </modules>
+    <artifactId>mild-wms-api</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -24,4 +17,15 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.mild</groupId>
+            <artifactId>mild-common-mybatis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mild.common</groupId>
+            <artifactId>mild-common-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.mild.system</groupId>
-        <artifactId>mild-system</artifactId>
+        <groupId>org.mild.wms</groupId>
+        <artifactId>mild-wms</artifactId>
         <version>${revision}</version>
     </parent>
 
-    <artifactId>mild-system-service</artifactId>
+    <artifactId>mild-wms-service</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -43,18 +43,10 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <groupId>org.mild.wms</groupId>
+            <artifactId>mild-wms-api</artifactId>
         </dependency>
 
-
-        <dependency>
-            <groupId>org.mild.system</groupId>
-            <artifactId>mild-system-api</artifactId>
-            <version>${revision}</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

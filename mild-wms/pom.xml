@@ -8,14 +8,13 @@
         <artifactId>mild</artifactId>
         <version>${revision}</version>
     </parent>
-
-    <artifactId>mild-system</artifactId>
-    <groupId>org.mild.system</groupId>
-    <version>${revision}</version>
+    <description>仓库管理模块</description>
+    <groupId>org.mild.wms</groupId>
+    <artifactId>mild-wms</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>mild-system-api</module>
-        <module>mild-system-service</module>
+        <module>mild-wms-api</module>
+        <module>mild-wms-service</module>
     </modules>
 
     <properties>

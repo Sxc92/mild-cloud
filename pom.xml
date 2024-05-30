@@ -15,6 +15,7 @@
         <module>mild-auth</module>
         <module>mild-gateway</module>
         <module>mild-system</module>
+        <module>mild-wms</module>
     </modules>
     <properties>
         <revision>1.0.0</revision>
@@ -166,9 +167,16 @@
                 <version>${revision}</version>
             </dependency>
 
+            <!-- notice 引入业务包 -->
             <dependency>
-                <groupId>org.mild.common</groupId>
-                <artifactId>mild-common-swagger</artifactId>
+                <groupId>org.mild.system</groupId>
+                <artifactId>mild-system-api</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mild.wms</groupId>
+                <artifactId>mild-wms-api</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>
