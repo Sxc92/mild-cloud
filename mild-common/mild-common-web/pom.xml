@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>org.mild.common</groupId>
-    <artifactId>mild-common-redis</artifactId>
+    <artifactId>mild-common-web</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,15 +19,25 @@
     </properties>
 
     <dependencies>
-        <!-- redis 客户端 因为考虑到分布式锁以及缓存队列所以使用redisson客户端 -->
         <dependency>
-            <groupId>org.redisson</groupId>
-            <artifactId>redisson-spring-boot-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-json</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba.fastjson2</groupId>
+            <artifactId>fastjson2-extension-spring6</artifactId>
         </dependency>
     </dependencies>
 </project>

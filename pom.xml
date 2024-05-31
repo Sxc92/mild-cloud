@@ -33,6 +33,7 @@
 
         <mysql.version>8.0.33</mysql.version>
         <redisson.version>3.24.3</redisson.version>
+        <lock4j.version>2.2.5</lock4j.version>
         <fastjson.version>2.0.41</fastjson.version>
         <hutool.version>5.8.26</hutool.version>
         <jwt.version>0.12.5</jwt.version>
@@ -94,6 +95,12 @@
             <dependency>
                 <groupId>com.alibaba.fastjson2</groupId>
                 <artifactId>fastjson2</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2-extension-spring6</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
 

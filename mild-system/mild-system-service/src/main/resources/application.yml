@@ -1,6 +1,13 @@
 server:
   port: 8081
 spring:
+  data:
+    redis:
+      host: 106.75.225.35
+      port: 6379
+      database: 0
+      keyPrefix: ${spring.application.name}
+#      mode: single
   cloud:
     nacos:
       discovery:
@@ -14,7 +21,8 @@ spring:
     password: 123456
   application:
     name: mild-system
-
+  profiles:
+    active: redisson
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 输出sql 执行日志

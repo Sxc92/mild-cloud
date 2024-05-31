@@ -1,7 +1,9 @@
 package org.mild.system.manage.impl;
 
+import com.alibaba.fastjson2.JSON;
 import lombok.RequiredArgsConstructor;
 import org.mild.common.exception.ServiceException;
+import org.mild.common.utils.RedisUtils;
 import org.mild.system.api.constant.ExceptionEnums;
 import org.mild.system.api.vo.AccountVO;
 import org.mild.system.domain.pojo.Account;
@@ -24,6 +26,7 @@ public class AccountManageImpl implements AccountManage {
 
     private final AccountConvert accountConvert;
 
+
     @Override
     public AccountVO getAccount(String id) {
 //        throw new ServiceException(ExceptionEnums.ACCOUNT_PASSWORD_ERROR);
@@ -31,7 +34,7 @@ public class AccountManageImpl implements AccountManage {
         String userName = account.getUserName();
         System.out.println(userName);
         AccountVO accountVO = accountConvert.toAccountVO(account);
-        System.out.println(accountVO.getUserName());
-        return null;
+        RedisUtils.set(accountVO.getId(), accountVO);
+        return accountVO;
     }
 }
