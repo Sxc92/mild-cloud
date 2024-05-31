@@ -62,4 +62,17 @@ public interface AccountEnums {
 
         private final int code;
     }
+
+    @Getter
+    @AllArgsConstructor
+    enum AccountExpired {
+        /**
+         * 账号锁定状态 0:锁定、1:未锁定
+         */
+        EXPIRED(0),
+
+        UN_EXPIRED(1);
+
+        private final int code;
+    }
 }

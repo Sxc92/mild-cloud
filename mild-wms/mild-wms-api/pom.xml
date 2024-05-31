@@ -19,7 +19,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.mild</groupId>
+            <groupId>org.mild.common</groupId>
             <artifactId>mild-common-mybatis</artifactId>
         </dependency>
 

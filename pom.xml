@@ -156,7 +156,7 @@
 
             <!-- 引入框架公共包 -->
             <dependency>
-                <groupId>org.mild</groupId>
+                <groupId>org.mild.common</groupId>
                 <artifactId>mild-common-mybatis</artifactId>
                 <version>${revision}</version>
             </dependency>

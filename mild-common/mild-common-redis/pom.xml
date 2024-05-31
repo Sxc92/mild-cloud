@@ -8,8 +8,9 @@
         <artifactId>mild-common</artifactId>
         <version>${revision}</version>
     </parent>
+
     <groupId>org.mild.common</groupId>
-    <artifactId>mild-common-mybatis</artifactId>
+    <artifactId>mild-common-redis</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -18,19 +19,15 @@
     </properties>
 
     <dependencies>
+        <!-- redis 客户端 因为考虑到分布式锁以及缓存队列所以使用redisson客户端 -->
         <dependency>
-            <groupId>org.mild.common</groupId>
-            <artifactId>mild-common-core</artifactId>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson-spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
     </dependencies>
 </project>
