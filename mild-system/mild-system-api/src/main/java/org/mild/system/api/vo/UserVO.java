@@ -1,22 +1,19 @@
-package org.mild.system.domain.pojo;
+package org.mild.system.api.vo;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import org.mild.common.mybatis.base.BaseModifyEntity;
+import org.mild.common.domain.vo.BaseVO;
 import org.mild.system.api.constant.AccountEnums;
 
 /**
  * @author 史偕成
- * @date 2024/05/24 17:11
- **/
-@Data
+ * @title LocaleConfigBaseVO
+ * @description
+ * @create 2023/11/28 9:23
+ */
 @EqualsAndHashCode(callSuper = true)
-@TableName("mild_sys_account")
-public class Account extends BaseModifyEntity {
-
+@Data
+public class UserVO extends BaseVO {
     /**
      * 账户名称
      */
@@ -32,7 +29,10 @@ public class Account extends BaseModifyEntity {
      */
     private Integer status;
 
-
+    /**
+     * 类型 {@link AccountEnums.AccountType}
+     */
     private Integer type;
+
 
 }

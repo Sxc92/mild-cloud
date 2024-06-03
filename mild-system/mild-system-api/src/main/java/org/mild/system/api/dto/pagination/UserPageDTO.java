@@ -10,7 +10,7 @@ import org.mild.common.domain.dto.QueryPage;
  **/
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class AccountPageDTO extends QueryPage {
+public class UserPageDTO extends QueryPage {
 
     private String userName;
 
