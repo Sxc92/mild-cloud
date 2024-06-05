@@ -2,7 +2,7 @@ package org.mild.wms.api.vo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.mild.common.domain.vo.BaseVO;
+import org.mild.common.web.vo.BaseVO;
 
 /**
  * @author 史偕成

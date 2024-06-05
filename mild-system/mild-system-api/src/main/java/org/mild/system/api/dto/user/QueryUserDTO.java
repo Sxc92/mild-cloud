@@ -1,7 +1,7 @@
 package org.mild.system.api.dto.user;
 
 import lombok.Data;
-import org.springframework.stereotype.Service;
+import org.mild.common.web.dto.QueryBaseDTO;
 
 import java.io.Serializable;
 
@@ -10,5 +10,5 @@ import java.io.Serializable;
  * @date 2024/06/02 18:45
  **/
 @Data
-public class UserSearchDTO implements Serializable {
+public class QueryUserDTO extends QueryBaseDTO {
 }

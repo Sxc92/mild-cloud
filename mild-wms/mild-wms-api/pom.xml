@@ -27,5 +27,10 @@
             <groupId>org.mild.common</groupId>
             <artifactId>mild-common-core</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.mild.common</groupId>
+            <artifactId>mild-common-web</artifactId>
+        </dependency>
     </dependencies>
 </project>

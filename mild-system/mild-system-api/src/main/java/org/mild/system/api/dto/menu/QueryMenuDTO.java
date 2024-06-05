@@ -2,7 +2,7 @@ package org.mild.system.api.dto.menu;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.mild.common.domain.dto.QueryBaseDTO;
+import org.mild.common.web.dto.QueryBaseDTO;
 
 /**
  * @author 史偕成

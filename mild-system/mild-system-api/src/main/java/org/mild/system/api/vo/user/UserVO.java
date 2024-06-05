@@ -1,8 +1,8 @@
-package org.mild.system.api.vo;
+package org.mild.system.api.vo.user;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.mild.common.domain.vo.BaseVO;
+import org.mild.common.web.vo.BaseVO;
 import org.mild.system.api.constant.AccountEnums;
 
 /**

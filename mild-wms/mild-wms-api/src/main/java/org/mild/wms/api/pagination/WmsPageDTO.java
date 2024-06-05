@@ -2,7 +2,7 @@ package org.mild.wms.api.pagination;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.mild.common.domain.dto.QueryPage;
+import org.mild.common.web.dto.QueryPage;
 
 /**
  * @author 史偕成

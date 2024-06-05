@@ -1,11 +1,7 @@
 package org.mild.system.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.mild.common.domain.Result;
-import org.mild.system.api.vo.UserVO;
 import org.mild.system.manage.UserManage;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

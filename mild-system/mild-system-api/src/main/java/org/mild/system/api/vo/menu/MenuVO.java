@@ -1,8 +1,8 @@
-package org.mild.system.api.dto.menu;
+package org.mild.system.api.vo.menu;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.mild.common.web.dto.OperaBaseDTO;
+import org.mild.common.web.vo.BaseVO;
 import org.mild.system.api.constant.MenuEnums;
 
 /**
@@ -13,11 +13,17 @@ import org.mild.system.api.constant.MenuEnums;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class OperaMenuDTO extends OperaBaseDTO {
+public class MenuVO extends BaseVO {
+
     /**
      * 菜单名称
      */
     private String name;
+
+    /**
+     * 父Id
+     */
+    private String parentId;
 
     /**
      * icon 图标

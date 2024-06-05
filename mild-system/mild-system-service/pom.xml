@@ -53,25 +53,19 @@
             <artifactId>mild-system-api</artifactId>
             <version>${revision}</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.yml</include>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-        </resources>
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--                <filtering>true</filtering>-->
+<!--                <includes>-->
+<!--                    <include>**/*.yml</include>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                </includes>-->
+<!--            </resource>-->
+<!--        </resources>-->
         <plugins>
             <!-- notice 针对于SpringBoot 3.2 如果不配置调用接口异常 -->
             <plugin>
@@ -102,60 +96,60 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>com.github.wvengen</groupId>
-                <artifactId>proguard-maven-plugin</artifactId>
-                <version>2.6.0</version>
-                <executions>
-                    <!--以下配置说明执行mvn的package命令时候，会执行proguard-->
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>proguard</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <!--输入jar-->
-                    <injar>${project.build.finalName}.jar</injar>
-                    <!--输出jar-->
-                    <outjar>${project.build.finalName}.jar</outjar>
-                    <!--是否混淆-->
-                    <obfuscate>true</obfuscate>
-                    <!--配置文件-->
-                    <proguardInclude>${project.basedir}/proguard.cfg</proguardInclude>
-                    <!--额外的依赖-->
-                    <!--
-                    <libs>
-                        <lib></lib>
-                    </libs>
-                    -->
-                    <!--对输入jar继续过滤-->
-                    <inLibsFilter>!META-INF/**</inLibsFilter>
-                    <!--输出路径配置-->
-                    <outputDirectory>${project.basedir}/target</outputDirectory>
-                    <!--混淆的一些细节选项-->
-                    <!--
-                    <options>
-                        <option></option>
-                    </options>
-                    -->
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <mainClass>org.mild.system.MildSystemApp</mainClass>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>com.github.wvengen</groupId>-->
+<!--                <artifactId>proguard-maven-plugin</artifactId>-->
+<!--                <version>2.6.0</version>-->
+<!--                <executions>-->
+<!--                    &lt;!&ndash;以下配置说明执行mvn的package命令时候，会执行proguard&ndash;&gt;-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>proguard</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash;输入jar&ndash;&gt;-->
+<!--                    <injar>${project.build.finalName}.jar</injar>-->
+<!--                    &lt;!&ndash;输出jar&ndash;&gt;-->
+<!--                    <outjar>${project.build.finalName}.jar</outjar>-->
+<!--                    &lt;!&ndash;是否混淆&ndash;&gt;-->
+<!--                    <obfuscate>true</obfuscate>-->
+<!--                    &lt;!&ndash;配置文件&ndash;&gt;-->
+<!--                    <proguardInclude>${project.basedir}/proguard.cfg</proguardInclude>-->
+<!--                    &lt;!&ndash;额外的依赖&ndash;&gt;-->
+<!--                    &lt;!&ndash;-->
+<!--                    <libs>-->
+<!--                        <lib></lib>-->
+<!--                    </libs>-->
+<!--                    &ndash;&gt;-->
+<!--                    &lt;!&ndash;对输入jar继续过滤&ndash;&gt;-->
+<!--                    <inLibsFilter>!META-INF/**</inLibsFilter>-->
+<!--                    &lt;!&ndash;输出路径配置&ndash;&gt;-->
+<!--                    <outputDirectory>${project.basedir}/target</outputDirectory>-->
+<!--                    &lt;!&ndash;混淆的一些细节选项&ndash;&gt;-->
+<!--                    &lt;!&ndash;-->
+<!--                    <options>-->
+<!--                        <option></option>-->
+<!--                    </options>-->
+<!--                    &ndash;&gt;-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <mainClass>org.mild.system.MildSystemApp</mainClass>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>

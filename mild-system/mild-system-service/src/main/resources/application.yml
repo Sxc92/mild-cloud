@@ -1,28 +1,27 @@
 server:
   port: 8081
 spring:
+  profiles:
+    active: redisson
+  application:
+    name: mild-system
   data:
     redis:
       host: 106.75.225.35
       port: 6379
       database: 0
       keyPrefix: ${spring.application.name}
-#      mode: single
-  cloud:
-    nacos:
-      discovery:
-        server-addr: 106.75.225.35:8848
-        namespace: public
+      mode: single
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 106.75.225.35:8848
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://106.75.225.35:3306/mild?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: 123456
-  application:
-    name: mild-system
-  profiles:
-    active: redisson
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 输出sql 执行日志

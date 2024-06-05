@@ -1,10 +1,7 @@
-package org.mild.common.domain.dto;
+package org.mild.common.web.dto;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.mild.common.enums.SortOrder;
-
-import java.io.Serializable;
 
 /**
  * @author 史偕成

@@ -1,7 +1,7 @@
 package org.mild.system.manage.mapstruct;
 
 import org.mapstruct.Mapper;
-import org.mild.system.api.vo.UserVO;
+import org.mild.system.api.vo.user.UserVO;
 import org.mild.system.domain.pojo.User;
 
 /**

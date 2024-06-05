@@ -1,4 +1,4 @@
-package org.mild.common.domain.vo;
+package org.mild.common.web.vo;
 
 import lombok.Data;
 
@@ -28,6 +28,9 @@ public class BaseVO implements Serializable {
      */
     private String createTime;
 
+    /**
+     * 软删标识
+     */
     private int deleted;
 
     /**

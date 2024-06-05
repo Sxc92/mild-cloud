@@ -1,10 +1,8 @@
 package org.mild.system.manage.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.mild.common.utils.RedisUtils;
-import org.mild.system.api.dto.user.UserSearchDTO;
-import org.mild.system.api.vo.UserVO;
-import org.mild.system.domain.pojo.User;
+import org.mild.system.api.dto.user.QueryUserDTO;
+import org.mild.system.api.vo.user.UserVO;
 import org.mild.system.domain.service.UserService;
 import org.mild.system.manage.UserManage;
 import org.mild.system.manage.mapstruct.UserConvert;
@@ -25,7 +23,7 @@ public class UserManageImpl implements UserManage {
     private final UserConvert userConvert;
 
     @Override
-    public UserVO detail(UserSearchDTO userSearchDTO) {
+    public UserVO detail(QueryUserDTO queryUserDTO) {
         return null;
     }
 

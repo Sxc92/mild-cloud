@@ -1,4 +1,4 @@
-package org.mild.common.domain.dto;
+package org.mild.common.web.dto;
 
 import lombok.Data;
 
