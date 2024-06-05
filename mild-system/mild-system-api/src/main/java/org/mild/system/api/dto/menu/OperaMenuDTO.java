@@ -1,29 +1,20 @@
-package org.mild.system.domain.pojo;
+package org.mild.system.api.dto.menu;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.mild.common.mybatis.base.BaseModifyEntity;
+import org.mild.common.domain.dto.OperaBaseDTO;
 import org.mild.system.api.constant.MenuEnums;
 
 /**
  * @author 史偕成
- * @date 2024/06/03 07:55
- **/
+ * @title LocaleConfigBaseVO
+ * @description
+ * @create 2023/11/28 9:23
+ */
 @EqualsAndHashCode(callSuper = true)
 @Data
-@TableName("mild_sys_menu")
-public class Menu extends BaseModifyEntity {
-
-    /**
-     * 菜单名称
-     */
+public class OperaMenuDTO extends OperaBaseDTO {
     private String name;
-
-    /**
-     * 父Id
-     */
-    private String parentId;
 
     /**
      * icon 图标

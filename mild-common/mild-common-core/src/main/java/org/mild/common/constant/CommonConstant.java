@@ -41,4 +41,9 @@ public interface CommonConstant {
 
 
     String SYSTEM_ERROR = "系统异常";
+
+    /**
+     * 默认顶层Id
+     */
+    String DEFAULT_TOP = "0";
 }

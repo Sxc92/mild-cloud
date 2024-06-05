@@ -3,7 +3,6 @@ package org.mild.common.domain.dto;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 
 /**
  * @author 史偕成
@@ -12,9 +11,7 @@ import java.time.LocalDateTime;
  * @create 2023/11/28 9:23
  */
 @Data
-public class BaseDTO implements Serializable {
+public class OperaBaseDTO implements Serializable {
 
-    private String createBy;
-
-    private LocalDateTime createTime;
+    private String id;
 }

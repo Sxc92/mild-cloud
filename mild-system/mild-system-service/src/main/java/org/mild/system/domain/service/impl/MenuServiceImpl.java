@@ -7,6 +7,8 @@ import org.mild.system.domain.service.MenuService;
 import org.springframework.stereotype.Service;
 
 /**
+ * 菜单基础增删改查 service
+ *
  * @author 史偕成
  * @date 2024/06/03 08:02
  **/
