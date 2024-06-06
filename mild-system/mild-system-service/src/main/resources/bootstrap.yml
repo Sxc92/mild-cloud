@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: redisson
+  cloud:
+    nacos:
+      server-addr: 106.75.225.35:8848
